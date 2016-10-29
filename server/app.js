@@ -23,7 +23,12 @@ app.use(cookieParser());
 
 
 app.use(stormpath.init(app, {
-  // Optional configuration options.
+  web: {
+    login: {
+      enabled: true,
+      nextUri: "/dashboard"
+    }
+  }
 }));
 
 app.set('trust proxy', true);
@@ -31,6 +36,7 @@ app.set('view engine', 'hbs');
 
 app.get('/', router);
 app.get('/dashboard', stormpath.loginRequired, router);
+app.get('/body-systems', stormpath.loginRequired, router);
 
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

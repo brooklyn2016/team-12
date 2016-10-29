@@ -1,0 +1,15 @@
+#dash a:link {
+    text-decoration: none;
+}
+
+#dash a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
