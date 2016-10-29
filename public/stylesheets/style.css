@@ -1,15 +1,41 @@
-#dash a:link {
-    text-decoration: none;
+#welcome{
+	color: rgb(17,68,112); 
+	display: inline; 
+	position: right; 
+	text-transform: uppercase; 
+	margin-right: 20px;
+	height: 100%;
+	bottom: 0;
 }
 
-#dash a:visited {
-    text-decoration: none;
+#dashbutton{
+	background-color:rgb(17,68,112); 
+	color: white; height: 20px; 
+	border-radius: 5px; 
+	padding: 10px; 
+	height: 20px; 
+	display: inline; 
+	text-transform: uppercase; 
+	margin: 0 20px 15px 10px;
 }
 
-a:hover {
-    text-decoration: underline;
+#logout-button{
+	display: inline; 
+	color: white; 
+	font-style: bold; 
+	text-transform: uppercase; 
+	background-color: rgb(188,33,50);
 }
 
-a:active {
-    text-decoration: underline;
+#headerbuttons{
+	bottom: 10px;
+	margin: 0 0 30px 0;
+}
+
+#header{
+	height: 100%; 
+	background-color: rgb(154,155,156); 
+	padding-top: 10px; 
+	padding-right: 30px; 
+	padding-bottom: 5px;
 }
