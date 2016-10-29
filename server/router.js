@@ -22,6 +22,7 @@ router.get('/dashboard', stormpath.loginRequired, stormpath.getUser, function(re
 	if(req.user){
 		status = true
 		name = (req.user.givenName);
+		lastname = (req.user.lastName);
 	}
 
 	res.render('dashboard', { name: name });
