@@ -18,6 +18,10 @@ app.use(cookieParser());
 
 app.use(express.static('./public'));
 
+app.use(stormpath.init(app, {
+  website: true
+}));
+
 app.set('trust proxy', true);
 app.set('view engine', 'hbs');
 
@@ -29,6 +33,7 @@ app.use(function(req, res, next) {
     next(err);
 });
 
-app.listen(3000, function(){
+app.on('stormpath.ready', function(){
+	app.listen(3000);
 	console.log('please working at 3000');
 })
