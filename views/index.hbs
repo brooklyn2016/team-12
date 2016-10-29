@@ -1,9 +1,28 @@
-<body>
-	<div id="index">
-	        <div class="row text-center">
-            <br>
+<div class="container-fluid">
+	<div id="index" class="row">
+        <div id="mission" class="col-md-6">
+            <center>
+              <img src="https://cantorrelief.org/cantor/wp-content/uploads/2016/07/VictorCruzFoundationLogo.png" alt="Newton's Laws" align="center" style="width:100%;height:auto;margin-top: 30px">
+            </center>
+            <br><br>
+            <h class="mheader">Our Mission</h>
+            <br><br>
+            <p class="paraheader">
+            The Victor Cruz Foundation is driven to impacting youth in an array of fields, but specifically towards the introduction and implementation of S.T.E.M learning through the creation of hands on, reader-friendly and impactful curriculum.
+            <br><br>
+            Our goal is to increase the number of underrepresented kids interest in career fields related to S.T.E.M while simultaneously helping build and reinforce some of the basic core school subjects.
+            </p>
+        </div>
+        <div id="logincol" class="col-md-6">
+            <div id="info">
+                <h class="sheader"> Science in Sports </h>
+                <br><br>
+                <p>The Sports in Science curriculum is a hands on, project based activities that encourage teamwork, collaboration, perseverance, and critical thinking themes that are also present in the National Football League and essential for NY Giants Victor Cruz’s success.
+                <br><br><br><br><br>
+                </p>
+
+            </div>
             <form class="form-inline" action="/logout" name="logout" method="post">
-                
                 {{#unless name}}
                 <a href="/login">
                     <button id="login-button" type="button" class="btn">LOG IN</button>
@@ -13,12 +32,10 @@
                 <button id="logout-button" type="submit" class="btn">LOG OUT</button>
                 {{/if}}
                 {{#unless name}}
-                <a href="/register">
-                    <p id="register-button" type="button">REGISTER</p>
+                <p id="register-button" type="button"> New to the site? <a href="/register"> REGISTER HERE</a></p>
                 {{/unless}}
-                </a>
+                
             </form>
-
         </div>
 	</div>
-</body>
+</div>
