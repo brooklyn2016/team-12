@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>Make breakfast for Victor!</h1>
+</div>
+
+<div class="row">
+
+<div class="col-3 menu">
+<ul>
+<img src="http://www.blackenterprise.com/wp-content/blogs.dir/1/files/2013/09/victor-cruz-mighty-wings.jpg" alt="Body Systems" align="center" style="width:150px;height:110px;">
+</ul>
+</div>
+
+<div class="col-9">
+
+<h2><center>Help Victor get energized for his workout!</center></h2>
+<h5>Pick the healthiest food to make Victor's sandwich. Remember any unhealthy choices can make Victor lose his winning streak!</h5>
+</div>
+<p style="padding-left: 17%"><b> Pick the bread! </b></p>
+<img src="http://www.browneyedbaker.com/wp-content/uploads/2016/05/white-bread-51-600-600x400.jpg" alt="Body Systems" hspace="100" align="center" style="width:150px;height:110px;">
+<br>
+
+<form action="">
+  <p style="padding-left: 20%"><input type="radio" name="bread" style="horizontal-align:middle" value="2" />White Bread<br></p>
+
+
+<img src="http://www.countrycleaver.com/wp-content/uploads/2013/01/IMG_0547.jpg" alt="Body Systems" hspace="100" align="center" style="width:150px;height:110px;">
+<br>
+
+
+  <p style="padding-left: 20%"><input type="radio" name="bread"  style="horizontal-align:middle" value="2"  onclick = "alert('Good Job! Multigrain Bread has more nutrition and gives more strength to athletes. White bread is does not have much nutrition value as mutigrain bread! Click on the NEXT button to prepare more ingredients');"/>Wheat Bread<br></p>
+
+<hr size= "6" noshade width="75%">
+</form>
+
+<form action="">
+
+<p style="padding-left: 17%"><b> Pick the meat! </b></p>
+<img src="http://www.empirekosher.com/wp-content/uploads/2011/11/Empire-Turkey-with-gravy-boat-260-x-170.jpg" alt="Body Systems" hspace="100" align="center" style="width:150px;height:110px;">
+<br>
+  <p style="padding-left: 20%"><input type="radio" name="meat" style="horizontal-align:middle" value="2" onclick = "alert('Good Job! Turkey has more protein. It is great for muscle building!');"/>Turkey<br></p>
+
+
+<img src="http://www.drinkamara.com/wp-content/uploads/2015/03/bacon_blog_post.jpg" alt="Body Systems" hspace="100" align="center" style="width:150px;height:110px;">
+<br>
+
+
+  <p style="padding-left: 20%"><input type="radio" name="meat"  style="horizontal-align:middle" value="2" o/>Bacon<br></p>
+
+<hr size= "6" noshade width="75%">
+
+</form>
+<p style="padding-left: 17%"><b> Let's add some cheese! </b></p>
+
+<img src="https://thejolipantrydotcom.files.wordpress.com/2016/03/g7-add-cheese.gif" alt="Body Systems" hspace="100" align="center" style="width:250px;height:200px;">
+
+<p style="padding-left: 30%">.</p>
+<p style="padding-left: 30%">.</p>
+<p style="padding-left: 30%">.</p>
+<p style="padding-left: 17%"><b> And some veggies! </b></p>
+
+<img src="https://i.kinja-img.com/gawker-media/image/upload/s--xWNNkHlp--/vb8f3vodnbmya7ilukah.gif" alt="Body Systems" hspace="100" align="center" style="width:250px;height:200px;">
+<br>
+<br>
+<br>
+<br>
+<p><center> Very nice! You have made a 350 calorie sandwich! Football players need to eat 1500 calories for breakfast alone! That is almost 5 more sandwiches in the morning!</center></p>
+<center><button onclick = "dashboard.asp">YEAH! LET'S EAT SOME MORE!</button></center>
+</div>
+</body>
+</html>
+
