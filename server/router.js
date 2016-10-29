@@ -43,5 +43,12 @@ router.get('/quest_of_day', stormpath.getUser, function(req, res){
 	res.render('quest_of_day', {name: name});
 });
 
+router.get('/sandwich', stormpath.getUser, function(req, res){
+	if(req.user){
+		name = (req.user.givenName);
+	}
+	res.render('sandwich', {name: name});
+});
+
 module.exports = router;
 
