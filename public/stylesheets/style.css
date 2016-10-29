@@ -6,9 +6,11 @@
 	margin-right: 20px;
 	height: 100%;
 	bottom: 0;
+	vertical-align: bottom;
+	font-size: 30px;
 }
 
-#dashbutton{
+.dashbutton{
 	background-color:rgb(17,68,112); 
 	color: white; height: 20px; 
 	border-radius: 5px; 
@@ -16,7 +18,7 @@
 	height: 20px; 
 	display: inline; 
 	text-transform: uppercase; 
-	margin: 0 20px 15px 10px;
+	margin: 0 10px 15px 10px;
 }
 
 #logout-button{
