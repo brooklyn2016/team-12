@@ -30,5 +30,5 @@ app.use(function(req, res, next) {
 });
 
 app.listen(3000, function(){
-	console.log('please working at 3000');
+	console.log('App listening for requests on port 3000');
 })
