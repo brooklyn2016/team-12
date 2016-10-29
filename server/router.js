@@ -22,10 +22,17 @@ router.get('/dashboard', stormpath.loginRequired, stormpath.getUser, function(re
 	if(req.user){
 		status = true
 		name = (req.user.givenName);
-		lastname = (req.user.lastName);
 	}
 
 	res.render('dashboard', { name: name });
+});
+
+router.get('/body-systems', stormpath.getUser, function(req, res){
+	if(req.user){ //check if logged in user or not
+		name=(req.user.givenName);
+		
+	res.render('body_systems', { name: name })
+	}
 });
 
 module.exports = router;
