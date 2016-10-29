@@ -38,6 +38,7 @@ app.get('/', router);
 app.get('/dashboard', stormpath.loginRequired, router);
 app.get('/body-systems', stormpath.loginRequired, router);
 app.get('/friends', stormpath.loginRequired, router);
+app.get('/quest_of_day', stormpath.loginRequired, router);
 
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
