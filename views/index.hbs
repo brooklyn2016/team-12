@@ -1,17 +1,28 @@
+<script src="/js/index.js"></script>
+
 <body>
-	<div class="login">
+	<div id="index">
+            {{#if name}}
+            <a href="/dashboard"> VIEW DASHBOARD</a>
+            {{/if}}
 	        <div class="row text-center">
-            <h4>Welcome to {{greeting}}</h4>
             <br>
             <form class="form-inline" action="/logout" name="logout" method="post">
+                {{#unless name}}
                 <a href="/login">
-                    <button id="login-button" type="button" class="btn btn-primary">LOG IN</button>
+                    <button id="login-button" type="button" class="btn">LOG IN</button>
                 </a>
-                <button id="logout-button" type="submit" class="btn btn-danger">LOG OUT</button>
+                {{/unless}}
+                {{#if name}}
+                <button id="logout-button" type="submit" class="btn">LOG OUT</button>
+                {{/if}}
+                {{#unless name}}
                 <a href="/register">
                     <p id="register-button" type="button">REGISTER</p>
+                {{/unless}}
                 </a>
             </form>
+
         </div>
 	</div>
 </body>

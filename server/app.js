@@ -12,20 +12,25 @@ var app = express();
 var server = require('http').Server(app);
 var router = require('./router');
 
+app.use(express.static('./public'));
+
+var favicon = require('serve-favicon');
+app.use(favicon(path.join(__dirname, 'favicon.ico')));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(express.static('./public'));
 
 app.use(stormpath.init(app, {
-  website: true
+  // Optional configuration options.
 }));
 
 app.set('trust proxy', true);
 app.set('view engine', 'hbs');
 
 app.get('/', router);
+app.get('/dashboard', stormpath.loginRequired, router);
 
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
@@ -33,7 +38,9 @@ app.use(function(req, res, next) {
     next(err);
 });
 
-app.on('stormpath.ready', function(){
-	app.listen(3000);
-	console.log('please working at 3000');
-})
+app.listen(3000);
+
+// Stormpath will let you know when it's ready to start authenticating users.
+app.on('stormpath.ready', function () {
+  console.log('Stormpath Ready at port 3000!');
+});
