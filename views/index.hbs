@@ -24,7 +24,7 @@
             </div>
             <form class="form-inline" action="/logout" name="logout" method="post">
                 {{#unless name}}
-                <a href="/login">
+                <a id="loginhover" href="/login">
                     <button id="login-button" type="button" class="btn">LOG IN</button>
                 </a>
                 {{/unless}}
@@ -32,7 +32,7 @@
                 <button id="logout-button" type="submit" class="btn">LOG OUT</button>
                 {{/if}}
                 {{#unless name}}
-                <p id="register-button" type="button"> New to the site? <a href="/register"> REGISTER HERE</a></p>
+                <p id="register-button" type="button"> New to the site? <a id="reg" href="/register"> REGISTER HERE</a></p>
                 {{/unless}}
                 
             </form>

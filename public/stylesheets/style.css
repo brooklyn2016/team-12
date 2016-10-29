@@ -91,14 +91,11 @@
 	font-size: 20px;
 }
 
-a{
+#reg {
 	color: white;
 }
 
-a: hover{
-	color: white;
-	text-decoration: none;
-}
+
 
 #info{
 	text-align: left;
