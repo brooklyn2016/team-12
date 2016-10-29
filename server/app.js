@@ -26,7 +26,7 @@ app.use(stormpath.init(app, {
   web: {
     login: {
       enabled: true,
-      nextUri: "/dashboard"
+      nextUri: "/quest_of_day"
     }
   }
 }));
@@ -37,6 +37,7 @@ app.set('view engine', 'hbs');
 app.get('/', router);
 app.get('/dashboard', stormpath.loginRequired, router);
 app.get('/body-systems', stormpath.loginRequired, router);
+app.get('/friends', stormpath.loginRequired, router);
 
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

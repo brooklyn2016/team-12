@@ -30,9 +30,17 @@ router.get('/dashboard', stormpath.loginRequired, stormpath.getUser, function(re
 router.get('/body-systems', stormpath.getUser, function(req, res){
 	if(req.user){ //check if logged in user or not
 		name=(req.user.givenName);
-		
-	res.render('body_systems', { name: name })
+
+	res.render('body_systems', { name: name });
 	}
+});
+
+router.get('/quest_of_day', stormpath.getUser, function(req, res){
+	if(req.user){
+		name = (req.user.givenName);
+	}
+
+	res.render('quest_of_day', {name: name});
 });
 
 module.exports = router;
