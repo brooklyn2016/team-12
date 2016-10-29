@@ -23,7 +23,12 @@ app.use(cookieParser());
 
 
 app.use(stormpath.init(app, {
-  // Optional configuration options.
+  web: {
+    login: {
+      enabled: true,
+      nextUri: "/dashboard"
+    }
+  }
 }));
 
 app.set('trust proxy', true);

@@ -11,6 +11,15 @@
     <script src="/js/bootstrap.js"></script>
 </head>
 <nav>
+<div align="right" style="height: 100%; background-color: rgb(154,155,156); padding-top: 20px; padding-right: 30px; padding-bottom: 5px; ">
+  {{#if name}}
+  <h3 align="right" style="color: rgb(17,68,112); display: inline; position: right; text-transform: uppercase; margin-right: 20px;">Welcome, {{ name }}</h3>
+  <a href="/dashboard" style="background-color:rgb(17,68,112); color: white; height: 20px; margin-left: 30px; margin-right: 10px; border-radius: 5px; padding: 10px; height: 20px; display: inline; text-transform: uppercase; margin-bottom: 10px;"> VIEW DASHBOARD</a>
+  <form class="form-inline" action="/logout" name="logout" method="post" style="display: inline; background-color: rgb(188,33,50);">
+    <button id="logout-button" type="submit" class="btn" style="display: inline; color: white; font-style: bold; text-transform: uppercase; background-color: rgb(188,33,50); margin-bottom: 10px;">Logout</button>
+  </form>
+  {{/if}}
+</div>
 </nav>
 <body>
 	{{{body}}}
